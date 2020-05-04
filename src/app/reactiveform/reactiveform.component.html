@@ -1,0 +1,37 @@
+<!-- <label>
+    Employee Name:
+    <input type="text" [formControl]="EmployeeName">
+</label>
+
+<p>Value:{{EmployeeName.value}}</p>
+<p>
+    <button (click)="updateEmployeeName()">Refresh</button>
+</p> -->
+
+<form [formGroup]="employeeForm">
+    <h2>Name and Designation</h2>
+    <label>
+        Name:
+        <input type="text" formControlName="Name">
+    </label>
+    <br>
+    <label>
+        Designation:
+        <input type="text" formControlName="Designation">
+    </label>
+    <h2>Employee Address</h2>
+    <label>
+        City:
+        <input type="text" formControlName="City">
+    </label>
+     <br>
+    <label>
+        Country:
+        <input type="text" formControlName="Country">
+    </label>
+    
+</form>
+
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()"></form>
+
+<button type = "submit">Submit </button>
